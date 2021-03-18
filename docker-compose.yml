@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+
+  product:
+    image: product
+    container_name: product
+    hostname: product
+    build:
+      context: .
+      dockerfile: ProductService/Dockerfile
+
+  sale:
+    image: sale
+    container_name: sale
+    hostname: sale
+    build:
+      context: .
+      dockerfile: SaleService/Dockerfile
+
+  gateway:
+    image: gateway
+    container_name: getaway
+    build:
+      context: .
+      dockerfile: GatewayAPI/Dockerfile
+    links:
+      - product
+      - sale
+    depends_on:
+      - product
+      - sale

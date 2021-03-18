@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  gateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "55001:80"
+      - "55011:443"
+
+  product:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "54001:80"
+      - "54011:443"
+
+
+  sale:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "54002:80"
+      - "54012:443"
