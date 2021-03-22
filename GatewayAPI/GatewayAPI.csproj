@@ -4,6 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>616dcc7e-818a-47f9-82b3-60f5801a7989</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <Authors>Rodolfo Nogueira Gomes</Authors>
+    <Version>0.0.1-beta</Version>
   </PropertyGroup>
 
   <ItemGroup>
