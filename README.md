@@ -11,7 +11,7 @@ To know more about how to setup your enviroment visit the [Microsoft .NET Downlo
 - Open Powershell
 - Go to repository folder ***(cd %REPO_FOLDER%)***
 - RUN **docker-compose up -d --build** 
-- Oper browser search localhost:5000
+- Oper browser search http://localhost:55001/swagger
 
 ## Technologies implemented:
 - ASP.NET Core 3.1 (with .NET 3.1)
