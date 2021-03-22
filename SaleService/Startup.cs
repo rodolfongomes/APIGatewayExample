@@ -25,6 +25,8 @@ namespace SaleService
             });
 
             services.AddControllers();
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,11 +37,14 @@ namespace SaleService
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseOwin(o => o.UseNancy(options =>
-            {
-                options.PerformPassThrough = (context => context.Response.StatusCode == HttpStatusCode.NotFound);
-                options.Bootstrapper = new Bootstrapper();
-            }));
+            //app.UseOwin(o => o.UseNancy(options =>
+            //{
+            //    options.PerformPassThrough = (context => context.Response.StatusCode == HttpStatusCode.NotFound);
+            //    options.Bootstrapper = new Bootstrapper();
+            //}));
+
+            app.UseSwagger();
+            app.UseSwaggerUI();
 
             app.UseHttpsRedirection();
 

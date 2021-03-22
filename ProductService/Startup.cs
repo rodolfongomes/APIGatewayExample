@@ -25,6 +25,8 @@ namespace ProductService
             });
 
             services.AddControllers();
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,12 +37,14 @@ namespace ProductService
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseOwin(o => o.UseNancy(options =>
-            {
-                options.PerformPassThrough = (context => context.Response.StatusCode == HttpStatusCode.NotFound);
-                options.Bootstrapper = new Bootstrapper();
-            }));
-
+            /// This part is used with nancy
+            //app.UseOwin(o => o.UseNancy(options =>
+            //{
+            //    options.PerformPassThrough = (context => context.Response.StatusCode == HttpStatusCode.NotFound);
+            //    options.Bootstrapper = new Bootstrapper();
+            //}));
+            app.UseSwagger();
+            app.UseSwaggerUI();
             app.UseHttpsRedirection();
 
             app.UseRouting();

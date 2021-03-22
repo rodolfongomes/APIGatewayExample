@@ -21,7 +21,7 @@ namespace GatewayAPI
                         .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                         .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", optional: true, reloadOnChange: true)
                         .AddJsonFile($"appsettings.local.json", optional: true, reloadOnChange: true)
-                        .AddJsonFile($"ocelot.json")
+                        .AddJsonFile($"ocelot.json", optional: true, reloadOnChange: true)
                         .AddEnvironmentVariables();
                 })
               .UseStartup<Startup>();

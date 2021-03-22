@@ -53,6 +53,27 @@
       "SwaggerKey": "sale"
     }
   ],
-
+  "SwaggerEndPoints": [
+    {
+      "Key": "product",
+      "Config": [
+        {
+          "Name": "Product API",
+          "Version": "v1",
+          "Url": "http://product/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "sale",
+      "Config": [
+        {
+          "Name": "Sale API",
+          "Version": "v1",
+          "Url": "http://sale/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
   "GlobalConfiguration": {}
 }
